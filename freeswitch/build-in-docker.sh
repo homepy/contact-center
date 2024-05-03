@@ -50,6 +50,7 @@ scl enable devtoolset-9 'bash'
 git clone -b 'v1.13.17' https://github.com/freeswitch/sofia-sip /usr/local/src/libs/sofia-sip
 mkdir -p /usr/local/sofia-sip
 cd /usr/local/src/libs/sofia-sip
+
 ./bootstrap.sh 
 ./configure --prefix=/usr/local/sofia-sip
 make
@@ -71,7 +72,7 @@ yum install -y libmp4v2-devel libmp4v2
 # deps for mod_v8 
 # see  https://github.com/freeswitch/libv8-packaging.git  https://github.com/v8/v8.git
 # yum install http://repo.okay.com.mx/centos/7/x86_64/release/okay-release-1-1.noarch.rpm
-# yum install -y libicu libicu-devel
+yum install -y libicu libicu-devel
 yum install -y http://repo.okay.com.mx/centos/7/x86_64/release/libicu57-57.1-12.el7.x86_64.rpm http://repo.okay.com.mx/centos/7/x86_64/release/v8-6.2.91-7.el7.x86_64.rpm  http://repo.okay.com.mx/centos/7/x86_64/release/v8-devel-6.2.91-7.el7.x86_64.rpm  --skip-broken
 
 
